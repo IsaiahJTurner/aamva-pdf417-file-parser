@@ -461,9 +461,36 @@ function parseLengthType(lengthType) {
   }
 }
 
-***********
-This file has been truncated for security.
-If you have a legitimate purpose for parsing DL/ID Card data, please contact me via social media @IsaiahJTurner.
-You can also email me <my_first_name>@<my_social_media_username>.com and I will share the parser with you.
-This file is NOT released under any open source software license. Please contact me to receive a license.
-**********
+export default function parse(photoIdScanData) {
+  const result = {
+    compliant: false,
+    fileType: null,
+    issuerIdentificationNumber: null,
+    aamvaVersionNumber: null,
+    jurisdictionVersionNumber: null,
+    numberOfEntries: null,
+    subfiles: [],
+  }
+  /*
+  26 lines redacted for security.
+  If you have a legitimate purpose for parsing DL/ID Card data, please contact me via social media @IsaiahJTurner.
+  You can also email me <my_first_name>@<my_social_media_username>.com and I will share the parser with you.
+  This file is NOT released under any open source software license. Please contact me to receive a license.
+  */
+  // Parse each subfile
+  for (let entryIndex = 0; entryIndex < result.numberOfEntries; entryIndex += 1) {
+    const subfile = {
+      type: null,
+      offset: null,
+      length: null,
+      data: {},
+    }
+    /*
+    24 lines redacted for security.
+    If you have a legitimate purpose for parsing DL/ID Card data, please contact me via social media @IsaiahJTurner.
+    You can also email me <my_first_name>@<my_social_media_username>.com and I will share the parser with you.
+    This file is NOT released under any open source software license. Please contact me to receive a license.
+    */
+    result.subfiles.push(subfile)
+  }
+}
