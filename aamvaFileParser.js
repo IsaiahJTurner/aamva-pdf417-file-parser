@@ -1,17 +1,3 @@
-/*
-  Never save a drivers license.
-  It is unlawful in many areas and ALL databases can be hacked.
-  
-  Generally, there is only one secure way to use DL/ID Card data:
-  1. To verify the accuracy of information that you have already been provided through manual input.
-  
-  Even this can be unlawful in many areas and you should check your local laws before attempting it.
-  
-  Do not store the raw data you obtain from scanning. Use this parser to filter data to only the fields you need.
-  
-  The fields you need should generally NOT include the Drivers License Number or ID Card Number.
-*/
-
 const complianceIndicator = String.fromCharCode(0x40)
 const dataElementSeparator = String.fromCharCode(0x0A)
 const recordSeparator = String.fromCharCode(0x1E)
@@ -471,12 +457,7 @@ export default function parse(photoIdScanData) {
     numberOfEntries: null,
     subfiles: [],
   }
-  /*
-  26 lines redacted for security.
-  If you have a legitimate purpose for parsing DL/ID Card data, please contact me via social media @IsaiahJTurner.
-  You can also email me <my_first_name>@<my_social_media_username>.com and I will share the parser with you.
-  This file is NOT released under any open source software license. Please contact me to receive a license.
-  */
+  // 26 lines redacted for security. See README.md for details.
   // Parse each subfile
   for (let entryIndex = 0; entryIndex < result.numberOfEntries; entryIndex += 1) {
     const subfile = {
@@ -485,12 +466,7 @@ export default function parse(photoIdScanData) {
       length: null,
       data: {},
     }
-    /*
-    24 lines redacted for security.
-    If you have a legitimate purpose for parsing DL/ID Card data, please contact me via social media @IsaiahJTurner.
-    You can also email me <my_first_name>@<my_social_media_username>.com and I will share the parser with you.
-    This file is NOT released under any open source software license. Please contact me to receive a license.
-    */
+    // 24 lines redacted for security. See README.md for details.
     result.subfiles.push(subfile)
   }
 }
